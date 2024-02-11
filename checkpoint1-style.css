@@ -1,0 +1,185 @@
+
+/****** COMMON ***** */
+html {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+
+  p {
+    display: grid; 
+    text-align: right; 
+    justify-content: center; 
+    align-items: center;
+} 
+
+
+
+/***** GRID - 1 ******/
+  .gridOne {
+    display: grid; 
+    width: 75vw;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(220, 216, 210);
+    margin: auto; 
+ } 
+
+
+
+
+/***** GRID - 2 ******/
+.gridTwo{
+       display: grid; 
+       width: 75vw;
+       grid-template-columns: 1fr 1fr 2fr;
+       background-color: rgb(220, 216, 210);
+       margin: auto;
+       margin-bottom: 160px; 
+    }
+          .gridTwo > .gridTwo-child1 {
+            background-color: red;
+        }
+        
+        .gridTwo > .gridTwo-child2 {
+            background-color: blue;
+            color:antiquewhite;
+        }
+        
+        .gridTwo > .gridTwo-child3 {
+            background-color: rgb(251, 206, 92);
+        }
+  
+  
+
+  /***** GRID - 3 ******/
+  .gridThree {
+    width: 500px;
+    height: 300px;
+    display: grid;
+    grid-template-rows: 1fr 3fr; 
+    margin: auto;
+}
+
+.gridThree .gridThree-01 {
+    background-color: rgb(181, 222, 250); 
+}
+
+.gridThree .gridThree-02 {
+    background-color: rgba(232, 153, 50, 0.897); 
+  }
+
+ .gridThree img {
+    width: 500px; 
+    height: 225px; 
+    object-fit: cover; 
+}
+
+
+
+
+/***** GRID - 4 ******/
+.gridFour {
+  width: 500px;
+  display: grid;
+  grid-template-rows: 1fr 1fr; 
+  background-color: rgb(83, 220, 83); 
+  margin: auto;
+} 
+      .gridFour-child-1 {
+        background-color: rgba(196, 249, 165, 0.859); 
+      }
+
+      #gridFour-child-2 {   
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        background-color: rgba(0, 0, 255, 0.3); 
+      }   
+
+
+
+/***** GRID - 5 ******/
+.gridFive {
+  width: 500px;
+  height: 350px;
+  display: grid;
+  grid-template-rows: 1fr 1fr; 
+  background-color: rgb(138, 182, 204); 
+  margin: auto;
+}
+
+        .gridFive-child1 {
+          background-color: rgb(154, 185, 239);}
+
+        .gridFive-child2 {
+          display: grid;
+          grid-template-columns: 2fr 1fr; 
+          background-color: rgba(41, 41, 232, 0.375); 
+        }
+
+        .gridFive-child2 img {
+          width: 200px; 
+          height: 200px; 
+          object-fit: cover;
+          padding: 12px;
+        }
+
+
+        
+/***** GRID - 6 ******/
+.gridSix {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 3fr; 
+  background-color: lightgray;
+  margin: auto;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+      .gridSix p{
+        font-family: 'Montserrat', sans-serif; 
+        font-weight: 600;
+      
+      }
+      .gridSix i {
+        padding-left: 18px;
+      }
+
+  
+
+
+
+
+
+
+
+
+/**** SEPARATOR HR ****/
+.container {
+    position: relative;
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 90px;
+} 
+
+hr {
+  width: 75%;
+  border: 1px dashed rgb(185, 185, 185); 
+  margin: 0 auto;
+}
+
+.grid-label {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: rgb(214, 214, 214);
+  background-color: white;
+  padding: 8px;
+} 
+
+
+
+
+
