@@ -1,0 +1,109 @@
+Hola Joaquin : enlace de github :
+
+https://github.com/Brahim-Amzil/checkpoint-01
+
+////////////////////////////////////////////////////////////////////////
+¿Cuáles son algunas de las cosas que hacen que SCSS sea diferente de CSS? (ponme ejemplos)
+
+SCSS es un preprocesador para CSS que extiende su sintaxis para agregar características adicionales y avanzadas como variables,
+ mixins y funciones. Esto hace que CSS sea más flexible, dinámico y evita repeticiones mediante la reutilización de bloques de código CSS. 
+
+
+////////////////////////////////////////////////////////////////////////
+
+¿Qué es una variable SCSS? (porque crees que debes utilizarla pon un ejemplo de una variable,
+ escribe una variable y como se pondría para utilizarla)
+
+>>> Una variable SCSS es un contenedor que almacena un valor (como un color, tamaño de fuente, ancho de elemento, etc.). 
+Luego podemos hacer referencia a esa variable en todo nuestro código CSS en lugar de repetir el valor real.
+
+Esto nos permite cambiar solo el valor de la variable, lo que a su vez actualizará el valor en todos los lugares 
+donde se hace referencia a la variable en todo el código. 
+Esto hace que nuestros estilos CSS sean más fáciles de mantener y flexibles y mucho más fáciles de actualizar/cambiar.
+
+ Ejemplo de una variable que nos permite reutilizar un valor de color y cambiarlo dinámicamente 
+en todas las posiciones modificando solo el valor de la variable : 
+
+------------------------------------------------------
+ejemplo :  
+
+$var-color: #00ff00;
+
+.p { 
+color: $var-color; 
+}
+
+.button { 
+color: $var-color; 
+}
+
+
+////////////////////////////////////////////////////////////////////////
+
+¿Qué es un SCSS Mixin? (porque crees que debes utilizarla pon un ejemplo de un mixin, 
+escribiendo cómo se crea y como se pondría para utilizarla)
+
+SCSS Mixin es un bloque de código que se puede usar muchas veces para diseñar elementos comunes.
+ El uso de “@mixin” nos permite evitar la duplicación de código, mantener estilos consistentes y mejorar la legibilidad del código.
+
+Ejemplo de un @mixin para diseñar un cuadro de texto (text-box): 
+------------------------------------------------------ 
+
+@mixin text-box($background-color, $color, $font-size) {
+ background-color: $background-color; 
+color: $color; 
+font-size: $font-size; 
+padding: 10px; 
+border-radius: 5px;
+ }
+
+.info-box { 
+@include text-box(#f4f4f4, #333, 14px);
+ }
+
+.warn-box { 
+@include text-box(#ffc0cb, #800000, 16px);
+ } 
+------------------------------------------------------
+
+En este ejemplo:
+
+- Definimos un @mixin para un "cuadro de texto" (text-box) que toma tres argumentos:
+ $fondo-color, $color y $font-size.
+- Dentro del @mixin, aplicamos esos argumentos ($xxxx) a las propiedades CSS relevantes.
+- Luego creamos 2 clases diferentes: .info-box, .warning-box,
+- Cada clase utiliza el @mixin “text”-box” con valores específicos para cada argumento, 
+creando cuadros de texto visualmente distintos.
+
+En otras palabras : 
+Definimos los argumentos @mixin con "$nombre-argumento" luego pase el valor deseado a esos argumentos
+donde sea necesario mientras aplicamos el resto de propiedades del @mixin.
+
+
+////////////////////////////////////////////////////////////////////////
+
+¿Qué significa Unidad fraccionaria (fr) con CSS Grid?
+
+En CSS Grid, una unidad fraccionaria (fr) representa una fracción/una porción del espacio disponible.
+Es flexible y permite que las columnas/filas compartan espacio dinámicamente. 
+Ejemplo :
+1fr: Ocupa 1 parte del espacio disponible. 
+2fr: Ocupa 2 partes, el doble de espacio que 1fr. 
+
+------------------------------------------------------ 
+ejemplo práctico : 
+
+.myGrid { 
+grid-template-columns: 1fr 3fr;
+ }
+ ------------------------------------------------------
+
+En este ejemplo, el espacio disponible se compartirá en dos "porciones" / columnas,
+ la segunda columna es 3 veces más ancha que la primera.
+
+
+
+
+
+
+###############################################
